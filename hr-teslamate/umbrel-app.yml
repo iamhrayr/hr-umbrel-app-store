@@ -1,0 +1,32 @@
+manifestVersion: 1
+id: hr-teslamate
+category: automation
+name: Teslamate
+version: "2.0.0"
+tagline: A self-hosted data logger for your Tesla
+description: >-
+  - High precision drive data recording
+  - No additional vampire drain: the car will fall asleep as soon as possible
+  - Automatic address lookup
+  - Easy integration into Home Assistant (via MQTT)
+  - Easy integration into Node-Red & Telegram (via MQTT)
+  - Geo-fencing feature to create custom locations
+  - Supports multiple vehicles per Tesla Account
+  - Charge cost tracking
+  - Import from TeslaFi and tesla-apiscraper
+releaseNotes: ""
+developer: teslamate-org
+website: https://teslamate.org
+dependencies: []
+repo: https://github.com/teslamate-org/teslamate
+support: https://github.com/teslamate-org/teslamate/discussions
+port: 3000
+gallery:
+  - https://docs.teslamate.org/screenshots/web_interface.png
+  - https://docs.teslamate.org/screenshots/battery-health.png
+  - https://docs.teslamate.org/screenshots/charging-stats.png
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: iamhrayr
+submission: --
