@@ -1,8 +1,8 @@
 services:
   app_proxy:
     environment:
-      APP_HOST: hr_teslamate_app_1
-      APP_PORT: 3101
+      APP_HOST: hr_teslamate_1
+      APP_PORT: 3000
       PROXY_AUTH_ADD: "false"
 
   teslamate:
@@ -15,8 +15,8 @@ services:
       - DATABASE_NAME=teslamate
       - DATABASE_HOST=database
       - MQTT_HOST=mosquitto
-    ports:
-      - 3101:4000
+    # ports:
+    #   - 3101:4000
     volumes:
       - ${APP_DATA_DIR}/data/import:/opt/app/import
     cap_drop:
@@ -40,8 +40,8 @@ services:
       - DATABASE_PASS=password #insert your secure database password!
       - DATABASE_NAME=teslamate
       - DATABASE_HOST=database
-    ports:
-      - 3102:3000
+    # ports:
+    #   - 3102:3000
     volumes:
       - ${APP_DATA_DIR}/data/grafana-data:/var/lib/grafana
 
