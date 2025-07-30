@@ -1,8 +1,8 @@
 services:
   app_proxy:
     environment:
-      APP_HOST: hr_teslamate_1
-      APP_PORT: 3000
+      APP_HOST: hr-teslamate_teslamate_1
+      APP_PORT: 4000
       PROXY_AUTH_ADD: "false"
 
   teslamate:
