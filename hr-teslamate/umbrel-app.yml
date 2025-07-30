@@ -20,7 +20,7 @@ website: https://teslamate.org
 dependencies: []
 repo: https://github.com/teslamate-org/teslamate
 support: https://github.com/teslamate-org/teslamate/discussions
-port: 3000
+port: 3101
 gallery:
   - https://docs.teslamate.org/screenshots/web_interface.png
   - https://docs.teslamate.org/screenshots/battery-health.png
