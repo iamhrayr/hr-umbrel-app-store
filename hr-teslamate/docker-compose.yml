@@ -29,6 +29,8 @@ services:
       - POSTGRES_USER=teslamate
       - POSTGRES_PASSWORD=$APP_PASSWORD
       - POSTGRES_DB=teslamate
+    ports:
+      - 5432:5432
     volumes:
       - ${APP_DATA_DIR}/data/postgres-db:/var/lib/postgresql/data
 
