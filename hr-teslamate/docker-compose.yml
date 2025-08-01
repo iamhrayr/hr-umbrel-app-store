@@ -2,7 +2,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: hr-teslamate_teslamate_1
-      APP_PORT: 4000
+      APP_PORT: 6002
       PROXY_AUTH_ADD: "false"
 
   teslamate:
@@ -34,6 +34,17 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/postgres-db:/var/lib/postgresql/data
 
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    ports:
+      - "6001:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: 123456
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+
   grafana:
     image: teslamate/grafana:latest
     restart: always
@@ -42,8 +53,8 @@ services:
       - DATABASE_PASS=$APP_PASSWORD
       - DATABASE_NAME=teslamate
       - DATABASE_HOST=database
-    # ports:
-    #   - 3102:3000
+    ports:
+      - 6000:3000
     volumes:
       - ${APP_DATA_DIR}/data/grafana-data:/var/lib/grafana
 
@@ -62,3 +73,4 @@ volumes:
   teslamate-grafana-data:
   mosquitto-conf:
   mosquitto-data:
+  pgadmin-data:
