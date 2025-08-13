@@ -4,6 +4,7 @@ category: developer
 name: Portainer
 version: "2.27.9"
 tagline: Run custom Docker containers on your Umbrel
+icon: https://getumbrel.github.io/umbrel-apps-gallery/portainer/icon.svg
 description: >-
   ⚠️ Make sure to only use named Docker volumes for your stacks and containers. Data in bind-mounted volumes
   will be lost when the Portainer app is restarted or updated.
