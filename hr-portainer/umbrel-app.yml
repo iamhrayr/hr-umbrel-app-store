@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: portainer
+id: hr-portainer
 category: developer
 name: Portainer
 version: "2.27.9"
